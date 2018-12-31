@@ -30,13 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // Econtact
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Form1";
+            this.ClientSize = new System.Drawing.Size(1183, 630);
+            this.Name = "Econtact";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Econtact_Load);
             this.ResumeLayout(false);
 
         }

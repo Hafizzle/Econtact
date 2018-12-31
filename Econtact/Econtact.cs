@@ -15,6 +15,11 @@ namespace Econtact
         public Econtact()
         {
             InitializeComponent();
+        }//hello it's me
+
+        private void Econtact_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

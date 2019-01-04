@@ -93,5 +93,10 @@ namespace Econtact
             sda.Fill(dt);
             dgvContactList.DataSource = dt;
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -59,9 +59,9 @@
             // 
             this.pictureBoxLogo.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
-            this.pictureBoxLogo.Location = new System.Drawing.Point(521, 12);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(1, 6);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(97, 84);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(127, 96);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxLogo.TabIndex = 0;
             this.pictureBoxLogo.TabStop = false;
@@ -196,7 +196,7 @@
             // 
             this.btnAdd.BackColor = System.Drawing.Color.Green;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(127, 544);
+            this.btnAdd.Location = new System.Drawing.Point(27, 532);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(82, 40);
             this.btnAdd.TabIndex = 13;
@@ -208,7 +208,7 @@
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.DarkSlateGray;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(224, 544);
+            this.btnUpdate.Location = new System.Drawing.Point(124, 532);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(81, 40);
             this.btnUpdate.TabIndex = 14;
@@ -220,7 +220,7 @@
             this.btnDelete.BackColor = System.Drawing.Color.Maroon;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnDelete.Location = new System.Drawing.Point(324, 544);
+            this.btnDelete.Location = new System.Drawing.Point(224, 532);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(89, 40);
             this.btnDelete.TabIndex = 16;
@@ -230,7 +230,7 @@
             // btnClear
             // 
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(427, 544);
+            this.btnClear.Location = new System.Drawing.Point(327, 532);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(86, 40);
             this.btnClear.TabIndex = 15;
@@ -240,9 +240,9 @@
             // dgvContactList
             // 
             this.dgvContactList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvContactList.Location = new System.Drawing.Point(471, 155);
+            this.dgvContactList.Location = new System.Drawing.Point(472, 137);
             this.dgvContactList.Name = "dgvContactList";
-            this.dgvContactList.Size = new System.Drawing.Size(597, 354);
+            this.dgvContactList.Size = new System.Drawing.Size(639, 435);
             this.dgvContactList.TabIndex = 17;
             // 
             // lblSearch
@@ -261,9 +261,9 @@
             // 
             this.txtBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxSearch.ForeColor = System.Drawing.Color.Black;
-            this.txtBoxSearch.Location = new System.Drawing.Point(555, 102);
+            this.txtBoxSearch.Location = new System.Drawing.Point(543, 105);
             this.txtBoxSearch.Name = "txtBoxSearch";
-            this.txtBoxSearch.Size = new System.Drawing.Size(513, 26);
+            this.txtBoxSearch.Size = new System.Drawing.Size(568, 26);
             this.txtBoxSearch.TabIndex = 19;
             this.txtBoxSearch.TextChanged += new System.EventHandler(this.txtBoxSearch_TextChanged);
             // 
@@ -276,6 +276,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Econtact
             // 

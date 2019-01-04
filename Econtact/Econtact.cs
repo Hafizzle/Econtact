@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Econtact.econtactClasses;
 
 namespace Econtact
 {
@@ -15,11 +16,14 @@ namespace Econtact
         public Econtact()
         {
             InitializeComponent();
-        }//hello it's me
+        }
+        contactClass c = new contactClass();
 
         private void Econtact_Load(object sender, EventArgs e)
         {
-
+            //Load data onto GridView
+            DataTable dt = c.Select();
+            dgvContactList.DataSource = dt;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -45,6 +49,33 @@ namespace Econtact
         private void lblContactNumber_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            c.FirstName = txtboxFirstName.Text;
+            c.LastName = txtboxLastName.Text;
+            c.ContactNo = txtboxContactNumber.Text;
+            c.Address = txtBoxAddress.Text;
+            c.Gender = cmbGender.Text;
+
+            bool success = c.Insert(c);
+            if (success == true)
+            {
+                //Successfully inserted
+                MessageBox.Show("New Contact Successfully added");
+            }
+            else
+            {
+                //Failed to insert data
+                MessageBox.Show("Failed to add new Contact. Try again.");
+
+            }
+
+                //Load data onto GridView
+                DataTable dt = c.Select();
+                dgvContactList.DataSource = dt;
+        
         }
     }
 }

@@ -40,18 +40,18 @@
             this.lblContactNumber = new System.Windows.Forms.Label();
             this.txtBoxAddress = new System.Windows.Forms.TextBox();
             this.lblAddress = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.Gender = new System.Windows.Forms.Label();
+            this.cmbGender = new System.Windows.Forms.ComboBox();
+            this.lblGender = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvContactList = new System.Windows.Forms.DataGridView();
             this.lblSearch = new System.Windows.Forms.Label();
             this.txtBoxSearch = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvContactList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,6 +82,7 @@
             this.txtboxcontactID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtboxcontactID.Location = new System.Drawing.Point(127, 108);
             this.txtboxcontactID.Name = "txtboxcontactID";
+            this.txtboxcontactID.ReadOnly = true;
             this.txtboxcontactID.Size = new System.Drawing.Size(286, 26);
             this.txtboxcontactID.TabIndex = 2;
             // 
@@ -168,28 +169,28 @@
             this.lblAddress.TabIndex = 9;
             this.lblAddress.Text = "Address";
             // 
-            // comboBox1
+            // cmbGender
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbGender.FormattingEnabled = true;
+            this.cmbGender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.comboBox1.Location = new System.Drawing.Point(127, 488);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(286, 21);
-            this.comboBox1.TabIndex = 11;
+            this.cmbGender.Location = new System.Drawing.Point(127, 488);
+            this.cmbGender.Name = "cmbGender";
+            this.cmbGender.Size = new System.Drawing.Size(286, 21);
+            this.cmbGender.TabIndex = 11;
             // 
-            // Gender
+            // lblGender
             // 
-            this.Gender.AutoSize = true;
-            this.Gender.BackColor = System.Drawing.Color.Transparent;
-            this.Gender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Gender.ForeColor = System.Drawing.Color.Black;
-            this.Gender.Location = new System.Drawing.Point(10, 488);
-            this.Gender.Name = "Gender";
-            this.Gender.Size = new System.Drawing.Size(63, 20);
-            this.Gender.TabIndex = 12;
-            this.Gender.Text = "Gender";
+            this.lblGender.AutoSize = true;
+            this.lblGender.BackColor = System.Drawing.Color.Transparent;
+            this.lblGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGender.ForeColor = System.Drawing.Color.Black;
+            this.lblGender.Location = new System.Drawing.Point(10, 488);
+            this.lblGender.Name = "lblGender";
+            this.lblGender.Size = new System.Drawing.Size(63, 20);
+            this.lblGender.TabIndex = 12;
+            this.lblGender.Text = "Gender";
             // 
             // btnAdd
             // 
@@ -201,6 +202,7 @@
             this.btnAdd.TabIndex = 13;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnUpdate
             // 
@@ -235,13 +237,13 @@
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgvContactList
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(471, 155);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(597, 354);
-            this.dataGridView1.TabIndex = 17;
+            this.dgvContactList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvContactList.Location = new System.Drawing.Point(471, 155);
+            this.dgvContactList.Name = "dgvContactList";
+            this.dgvContactList.Size = new System.Drawing.Size(597, 354);
+            this.dgvContactList.TabIndex = 17;
             // 
             // lblSearch
             // 
@@ -259,7 +261,7 @@
             // 
             this.txtBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxSearch.ForeColor = System.Drawing.Color.Black;
-            this.txtBoxSearch.Location = new System.Drawing.Point(555, 111);
+            this.txtBoxSearch.Location = new System.Drawing.Point(555, 102);
             this.txtBoxSearch.Name = "txtBoxSearch";
             this.txtBoxSearch.Size = new System.Drawing.Size(513, 26);
             this.txtBoxSearch.TabIndex = 19;
@@ -282,13 +284,13 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtBoxSearch);
             this.Controls.Add(this.lblSearch);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvContactList);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.Gender);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.lblGender);
+            this.Controls.Add(this.cmbGender);
             this.Controls.Add(this.txtBoxAddress);
             this.Controls.Add(this.lblAddress);
             this.Controls.Add(this.txtboxContactNumber);
@@ -305,7 +307,7 @@
             this.Text = "EContact";
             this.Load += new System.EventHandler(this.Econtact_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvContactList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -325,13 +327,13 @@
         private System.Windows.Forms.Label lblContactNumber;
         private System.Windows.Forms.TextBox txtBoxAddress;
         private System.Windows.Forms.Label lblAddress;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label Gender;
+        private System.Windows.Forms.ComboBox cmbGender;
+        private System.Windows.Forms.Label lblGender;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvContactList;
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.TextBox txtBoxSearch;
         private System.Windows.Forms.PictureBox pictureBox1;

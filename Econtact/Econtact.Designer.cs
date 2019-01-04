@@ -265,6 +265,7 @@
             this.txtBoxSearch.Name = "txtBoxSearch";
             this.txtBoxSearch.Size = new System.Drawing.Size(513, 26);
             this.txtBoxSearch.TabIndex = 19;
+            this.txtBoxSearch.TextChanged += new System.EventHandler(this.txtBoxSearch_TextChanged);
             // 
             // pictureBox1
             // 

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -76,6 +78,20 @@ namespace Econtact
                 DataTable dt = c.Select();
                 dgvContactList.DataSource = dt;
         
+        }
+        static string myconnstr = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
+        
+
+        private void txtBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            //Get value from text box
+            string keyword = txtBoxSearch.Text;
+            SqlConnection conn = new SqlConnection(myconnstr);
+
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM tbl_contact WHERE FirstName LIKE '%" + keyword + "%' OR LastName LIKE '%" + keyword + "%' OR Address LIKE '%" + keyword + "%'", conn);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            dgvContactList.DataSource = dt;
         }
     }
 }
